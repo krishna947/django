@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="add">
+    {% csrf_token %}
+    <label>Product Name:</label>
+    <div>{{ form.name}}</div>
+
+    <label>Quantity:</label>
+    <div>{{ form.quantity}}</div>
+
+    <label>Status:</label>
+    <div>{{ form.status}}</div>
+
+    <label>Date:</label>
+    <div>{{ form.date}}</div>
+
+    <div><button type="submit">Add</div>
+</form>
+
+{% endblock %}

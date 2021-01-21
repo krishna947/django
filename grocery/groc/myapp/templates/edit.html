@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" action="/update/{{ grocery.id }}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><input name="name" required value="{{grocery.name}}"></td>
+        </tr>
+        <tr>
+            <td><input name="quantity" required value="{{grocery.quantity}}"></td>
+        </tr>
+        <tr>
+            <td><input name="status" required value="{{grocery.status}}"></td>
+        </tr>
+        <tr>
+            <td><input name="status" required value="{{grocery.date}}"></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Update</td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}
